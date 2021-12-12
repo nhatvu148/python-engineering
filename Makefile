@@ -23,7 +23,7 @@ endef
 all: run-py
 
 run-py:
-	@$(PYTHON) python_straight_line.py
+	@$(PYTHON) python_parabola.py
 
 venv:
 	@$(create-venv)
