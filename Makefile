@@ -20,7 +20,7 @@ $(PYTHON_ROOT)/python.exe -m venv venv
 endef
 
 .PHONY: all
-all: run-py9
+all: run-py10
 
 run-py1:
 	@$(PYTHON) airplane-forward-motion/python_parabola.py
@@ -48,6 +48,9 @@ run-py8:
 
 run-py9:
 	@$(PYTHON) autonomous-vehicle/MAIN_MPC_car_lateral.py
+
+run-py10:
+	@$(PYTHON) drone/python_3D_motion_drone.py
 
 venv:
 	@$(create-venv)
