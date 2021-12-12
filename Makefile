@@ -20,7 +20,7 @@ $(PYTHON_ROOT)/python.exe -m venv venv
 endef
 
 .PHONY: all
-all: run-py3
+all: run-py4
 
 run-py1:
 	@$(PYTHON) airplane-forward-motion/python_parabola.py
@@ -30,6 +30,9 @@ run-py2:
 
 run-py3:
 	@$(PYTHON) oscillation/python_sinusoidal_motion.py
+
+run-py4:
+	@$(PYTHON) watertank/python_waterTanks.py
 
 venv:
 	@$(create-venv)
