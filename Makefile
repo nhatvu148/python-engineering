@@ -20,10 +20,10 @@ $(PYTHON_ROOT)/python.exe -m venv venv
 endef
 
 .PHONY: all
-all: run-py
+all: run-py0
 
 run-py0:
-	@$(PYTHON) engineering/projectile.py
+	@$(PYTHON) engineering/pendulum.py
 
 run-py00:
 	@$(PYTHON) vibration/P5_Frequency_Response_MDOF.py
