@@ -1,28 +1,18 @@
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import cm
+from mpl_toolkits.mplot3d import Axes3D
 
-# theta from 0 to 360 degrees
-theta = np.linspace(0, 2*np.pi, 30)
-y1 = 5*np.sin(theta)
-y2 = 10*np.cos(theta)
+x = np.arange(-5, 5, 0.25)
+y = np.arange(-3, 3, 0.25)
+x, y = np.meshgrid(x, y)
 
-plt.subplot(2, 1, 1)
-plt.plot(180/np.pi*theta, y1, 'r--o')
-plt.xlabel("Theta")
-plt.title("Sine Function", fontsize=15)
-plt.xlim(0, 360)
-plt.ylabel("Sine")
-plt.ylim(-10, 10)
-plt.grid()
+R = np.sqrt(x**2 + y**2)
+z = np.sin(R)
 
-plt.tight_layout(pad=3.0)
+fig = plt.figure()
+ax = Axes3D(fig)
 
-plt.subplot(2, 1, 2)
-plt.plot(180/np.pi*theta, y2, 'g-*')
-plt.xlabel("Theta")
-plt.ylabel("Cosine")
-plt.title("Cosine Function", fontsize=15)
-plt.xlim(0, 360)
-plt.ylim(-10, 10)
-plt.grid()
+S1 = ax.plot_surface(x, y, z, cmap=cm.jet)
+fig.colorbar(S1)
 plt.show()
