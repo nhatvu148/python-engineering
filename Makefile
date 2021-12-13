@@ -25,8 +25,11 @@ all: run-py
 run-py0:
 	@$(PYTHON) engineering/projectile.py
 
-run-py:
+run-py00:
 	@$(PYTHON) vibration/P5_Frequency_Response_MDOF.py
+
+run-py:
+	@$(PYTHON) thermal/heat_diffusion.py
 
 run-py1:
 	@$(PYTHON) airplane-forward-motion/python_parabola.py
