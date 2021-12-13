@@ -22,8 +22,11 @@ endef
 .PHONY: all
 all: run-py
 
-run-py:
+run-py0:
 	@$(PYTHON) engineering/projectile.py
+
+run-py:
+	@$(PYTHON) vibration/P1_SDOF.py
 
 run-py1:
 	@$(PYTHON) airplane-forward-motion/python_parabola.py
