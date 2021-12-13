@@ -20,7 +20,10 @@ $(PYTHON_ROOT)/python.exe -m venv venv
 endef
 
 .PHONY: all
-all: run-py10
+all: run-py
+
+run-py:
+	@$(PYTHON) run.py
 
 run-py1:
 	@$(PYTHON) airplane-forward-motion/python_parabola.py
