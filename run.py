@@ -1,22 +1,28 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# x = [1, 2, 3, 4]
-# y = [1, 4, 9, 16]
-
-# plt.plot(x, y)
-# plt.xlabel("X")
-# plt.ylabel("Y")
-# plt.title("F(x, y)")
-# plt.show()
-
 # theta from 0 to 360 degrees
 theta = np.linspace(0, 2*np.pi, 30)
-y = 5*np.sin(theta)
-plt.plot(180/np.pi*theta, y, 'r--*')
+y1 = 5*np.sin(theta)
+y2 = 10*np.cos(theta)
+
+plt.subplot(2, 1, 1)
+plt.plot(180/np.pi*theta, y1, 'r--o')
 plt.xlabel("Theta")
-plt.ylabel("Y")
-plt.title("Sine Wave", fontsize=15)
+plt.title("Sine Function", fontsize=15)
 plt.xlim(0, 360)
-plt.ylim(-5, 5)
+plt.ylabel("Sine")
+plt.ylim(-10, 10)
+plt.grid()
+
+plt.tight_layout(pad=3.0)
+
+plt.subplot(2, 1, 2)
+plt.plot(180/np.pi*theta, y2, 'g-*')
+plt.xlabel("Theta")
+plt.ylabel("Cosine")
+plt.title("Cosine Function", fontsize=15)
+plt.xlim(0, 360)
+plt.ylim(-10, 10)
+plt.grid()
 plt.show()
