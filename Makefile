@@ -23,7 +23,7 @@ endef
 all: run-py
 
 run-py:
-	@$(PYTHON) engineering/sfd1.py
+	@$(PYTHON) engineering/sfd2.py
 
 run-py1:
 	@$(PYTHON) airplane-forward-motion/python_parabola.py
