@@ -23,7 +23,7 @@ endef
 all: run-py
 
 run-py:
-	@$(PYTHON) engineering/vonMises.py
+	@$(PYTHON) engineering/projectile.py
 
 run-py1:
 	@$(PYTHON) airplane-forward-motion/python_parabola.py
