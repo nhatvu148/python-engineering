@@ -26,7 +26,7 @@ run-py0:
 	@$(PYTHON) engineering/projectile.py
 
 run-py:
-	@$(PYTHON) vibration/P3_Frequency_Response_SDOF.py
+	@$(PYTHON) vibration/P5_Frequency_Response_MDOF.py
 
 run-py1:
 	@$(PYTHON) airplane-forward-motion/python_parabola.py
